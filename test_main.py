@@ -4,8 +4,7 @@ from main import *
 ### PART One
 
 def test_word_count_map():
-    assert word_count_map('i am sam i am') == \
-           [('i', 1), ('am', 1), ('sam', 1), ('i', 1), ('am', 1)]
+    assert word_count_map('i am sam i am') == [('i', 1), ('am', 1), ('sam', 1), ('i', 1), ('am', 1)]
 
     
 def test_word_count_reduce():
@@ -39,4 +38,9 @@ def test_sentiment():
     ]
     result = run_map_reduce(sentiment_map, word_count_reduce, docs)
     assert result == [('negative', 3), ('positive', 3)]
+
+
+
+print(test_sentiment_map())
+
 
